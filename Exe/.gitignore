@@ -16,6 +16,7 @@ desktop-app/data/
 desktop-app/build/
 desktop-app/dist/
 desktop-app/*.spec
+*.exe
 
 # Ruflo
 .claude-flow/
