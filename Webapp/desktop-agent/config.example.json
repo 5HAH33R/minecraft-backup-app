@@ -1,0 +1,11 @@
+{
+  "api_url": "http://localhost:8000",
+  "auth_token": "",
+  "minecraft_saves_path": "",
+  "watched_worlds": [],
+  "sync_interval_minutes": 30,
+  "debounce_seconds": 10,
+  "refresh_token": "",
+  "api_key": "",
+  "debug": false
+}

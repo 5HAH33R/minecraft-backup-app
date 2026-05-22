@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-press-start: "Press Start 2P", system-ui;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  --color-minecraft-grass: #7CB342;
+  --color-minecraft-dirt: #8D6E63;
+  --color-minecraft-dirt-dark: #5D4037;
+  --color-minecraft-sky: #64B5F6;
+  --color-minecraft-gold: #FFD54F;
+  --color-minecraft-stone: #9E9E9E;
+  --color-minecraft-wood: #A1887F;
+  --color-minecraft-obsidian: #263238;
+  --color-minecraft-dark: #1E1E1E;
+  --color-minecraft-sidebar: #4E342E;
+}
+
+@utility text-shadow {
+  text-shadow: 2px 2px #000;
+}
+
+@utility pixel-border {
+  border: 4px solid #000;
+  box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.3), inset 4px 4px 0px 0px rgba(255,255,255,0.1);
+}
+
+@utility pixel-btn {
+  @apply relative inline-block px-4 py-2 font-mono text-[12px] text-white uppercase transition-all;
+  background-color: var(--color-minecraft-grass);
+  border: 3px solid #000;
+  box-shadow: inset -3px -3px 0px 0px rgba(0,0,0,0.4);
+  
+  &:hover {
+    @apply brightness-110 -translate-y-0.5 shadow-md;
+  }
+  
+  &:active {
+    @apply translate-y-1 brightness-90 shadow-inner;
+  }
+}
+
+@utility pixel-btn-secondary {
+  @apply pixel-btn;
+  background-color: var(--color-minecraft-dirt);
+}
+
+@utility pixel-card {
+  @apply p-4 relative font-mono;
+  background-color: var(--color-minecraft-wood);
+  border: 4px solid var(--color-minecraft-dirt-dark);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid #000;
+    pointer-events: none;
+  }
+}
+
+@utility pixel-input {
+  @apply w-full p-3 font-mono text-white bg-black/40 border-4 border-black/30 focus:border-minecraft-sky outline-none;
+}
+
+.minecraft-bg-grid {
+  background-color: #263238;
+  background-image: radial-gradient(#1a2327 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+body {
+  @apply bg-minecraft-dark text-white font-mono;
+}

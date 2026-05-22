@@ -1,0 +1,23 @@
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.env
+*.db
+*.log
+config.json
+.DS_Store
+Backend/tmp/
+Backend/venv/
+Backend/__pycache__/
+*.pyc
+frontend/node_modules/
+
+# Ruflo
+.claude-flow/
+.claude/
+
+# Obsidian (local workspace layout only)
+.obsidian/workspace*
+.obsidian/workspace-mobile*
+

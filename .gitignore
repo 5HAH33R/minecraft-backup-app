@@ -1,0 +1,22 @@
+# Env files
+.env
+
+# SQLite databases
+*.db
+
+# Ruflo
+.claude-flow/
+.claude/
+.mcp.json
+.swarm/
+ruvector.db
+
+# Logs
+*.log
+
+# Large archives
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
