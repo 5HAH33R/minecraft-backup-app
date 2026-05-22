@@ -1,6 +1,12 @@
 # Minecraft Backup
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Minecraft](https://img.shields.io/badge/Minecraft-green?logo=minecraft)
+![Backup](https://img.shields.io/badge/Backup-auto-blue)
+![Google Drive](https://img.shields.io/badge/Google%20Drive-cloud-yellow?logo=googledrive)
+![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-teal?logo=fastapi)
+![React](https://img.shields.io/badge/React-frontend-blue?logo=react)
 
 I lost my Minecraft world of 3 years to a corrupted save file. This app makes sure that never happens to anyone else.
 
