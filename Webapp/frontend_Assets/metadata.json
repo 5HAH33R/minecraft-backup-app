@@ -1,0 +1,6 @@
+{
+  "name": "Minecraft Backup App",
+  "description": "A professional, Minecraft-themed dashboard for managing and syncing your world backups to Google Drive.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

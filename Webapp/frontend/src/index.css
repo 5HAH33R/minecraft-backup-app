@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Minecraft Grid Background ── */
+@layer components {
+  .minecraft-bg-grid {
+    background-color: #1a1a2e;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* ── Text Shadow for Headings ── */
+  .text-shadow {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ── Pixel Button (Primary Green) ── */
+  .pixel-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    background-color: #7CB342;
+    border: 3px solid #2d2d2d;
+    box-shadow: inset -3px -3px 0 0 rgba(0, 0, 0, 0.35);
+    transition: all 0.12s ease;
+    cursor: pointer;
+    line-height: 1.2;
+    user-select: none;
+  }
+
+  .pixel-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.3),
+      inset -3px -3px 0 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .pixel-btn:active {
+    transform: translateY(2px);
+    filter: brightness(0.92);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .pixel-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    filter: none;
+    transform: none;
+  }
+
+  .pixel-btn-secondary {
+    background-color: #8D6E63;
+  }
+
+  .pixel-btn-danger {
+    background-color: #EF4444;
+  }
+
+  /* ── Pixel Card Surface ── */
+  .pixel-card {
+    padding: 1.25rem;
+    position: relative;
+    background-color: #A1887F;
+    border: 4px solid #5D4037;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
+    color: #111111;
+  }
+
+  .pixel-card-dark {
+    background-color: rgba(38, 50, 56, 0.8);
+    border-color: #2d2d2d;
+    color: #e2e8f0;
+  }
+
+  /* ── Pixel Input ── */
+  .pixel-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    color: #e2e8f0;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 3px solid rgba(0, 0, 0, 0.35);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    box-sizing: border-box;
+  }
+
+  .pixel-input:focus {
+    border-color: #64B5F6;
+    box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.2);
+  }
+
+  .pixel-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ── Pixel Toggle ── */
+  .pixel-toggle {
+    width: 56px;
+    height: 28px;
+    border: 3px solid #2d2d2d;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .pixel-toggle-knob {
+    width: 18px;
+    height: 14px;
+    background-color: white;
+    border: 2px solid #2d2d2d;
+    transition: transform 0.15s ease;
+  }
+
+  .pixel-toggle.on {
+    background-color: #7CB342;
+  }
+
+  .pixel-toggle.off {
+    background-color: #EF4444;
+  }
+
+  .pixel-toggle.on .pixel-toggle-knob {
+    transform: translateX(28px);
+  }
+
+  .pixel-toggle.off .pixel-toggle-knob {
+    transform: translateX(0);
+  }
+
+  /* ── Skip Link (keyboard users) ── */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0.5rem;
+    z-index: 9999;
+    padding: 0.75rem 1.5rem;
+    background-color: #7CB342;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border: 3px solid #2d2d2d;
+    transition: top 0.1s ease;
+  }
+
+  .skip-link:focus {
+    top: 0.5rem;
+  }
+
+  /* ── Focus-visible rings for keyboard nav ── */
+  .pixel-btn:focus-visible,
+  .pixel-toggle:focus-visible {
+    outline: 3px solid #64B5F6;
+    outline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid #64B5F6;
+    outline-offset: 2px;
+  }
+
+  .pixel-input:focus-visible {
+    border-color: #64B5F6;
+    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.35);
+  }
+
+  .pixel-toggle:focus-visible,
+  .pixel-toggle:focus-visible .pixel-toggle-knob {
+    outline: 3px solid #64B5F6;
+    outline-offset: 2px;
+  }
+
+  /* ── Screen-reader only utility ── */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ── Pixel Border (decorative) ── */
+  .pixel-border {
+    border: 4px solid #2d2d2d;
+    box-shadow:
+      inset -4px -4px 0 0 rgba(0, 0, 0, 0.25),
+      inset 4px 4px 0 0 rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Custom Scrollbar ── */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a2e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #5D4037;
+    border: 2px solid #2d2d2d;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8D6E63;
+  }
+}
+
+/* ── Global Body ── */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #1a1a2e;
+  color: #e2e8f0;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ── Light mode overrides ── */
+html:not(.dark) body {
+  background-color: #f5f5f0;
+  color: #37474f;
+}
+
+html:not(.dark) .minecraft-bg-grid {
+  background-color: #e8e5df;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.06) 1px, transparent 0);
+}
